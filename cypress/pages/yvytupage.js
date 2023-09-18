@@ -20,6 +20,13 @@ class Yvytu {
       getGenericLink() {
         return cy.get("a");
       }
+      //Cabañas
+      getCabtitle(){
+        return cy.get("h3")
+      }
+      getItemContainer(){
+        return cy.get(`div[class="flex flex-col font-normal"]`)
+      }
 }
 module.exports = new Yvytu();
 

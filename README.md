@@ -67,7 +67,7 @@
 
 **_ Test utilizando tablas _**
 
-- Tablas sencillas de una linea - (hashe)
-- Tablas con "cabecera" y una o multiples lineas - (rows)
-- Tablas traspuestas (columnas a filas) - (raw/rawTable)
-- Tablas de Scenarios Outline - (rowsHash)
+- Tablas sencillas de una linea
+- Tablas con "cabecera" y una o multiples lineas
+- Tablas traspuestas (columnas a filas)
+- Tablas de Scenarios Outline

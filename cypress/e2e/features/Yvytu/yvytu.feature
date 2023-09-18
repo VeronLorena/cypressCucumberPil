@@ -24,3 +24,21 @@ Feature: Home Yvytu
         Then visualiza el link "Reservar" redireciona a "https://wa.me/5493757454400"
         And visualiza el link "/reserva_yvytu" redireciona a "https://www.instagram.com/reserva_yvytu/"
         Then visualiza el link "Enviar mensaje" redireciona a "https://wa.me/5493757454400"
+
+
+
+    Scenario: Verificar Cabañas
+        Given que un usuario esta en la página "Yvytu"
+        When  el usuario hace scroll hasta "Nuestras cabañas"
+        Then se verifica que la cabaña "1" llamada "Yaguareté" posee las siguientes caracteristicas "Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi, Aire acondicionado"
+        And se verifica que la cabaña "2" llamada "Arasari" posee las siguientes caracteristicas "Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi"
+
+    @focus
+    Scenario Outline: Verificar Cabañas <num>: <nombreCab>
+        Given que un usuario esta en la página "Yvytu"
+        When  el usuario hace scroll hasta "Nuestras cabañas"
+        Then se verifica que la cabaña "<num>" llamada "<nombreCab>" posee las siguientes caracteristicas "<item>"
+        Examples:
+            | num | nombreCab | item                                                                                     |
+            | 1   | Yaguareté | Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi, Aire acondicionado |
+            | 2   | Arasari   | Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi                     |
