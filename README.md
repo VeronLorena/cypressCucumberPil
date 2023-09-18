@@ -1,5 +1,7 @@
 # Para iniciar con el proyecto usando cucumber
 
+![Imagen derorativa del perfil](https://media.tenor.com/_jagjmdZu28AAAAC/spongebob-question.gif)
+
 ## Ejecutar comandos como:
 
 - 1 comando : npm init
@@ -10,6 +12,8 @@
 
 ## IMPORTANTE:
 
+![Imagen derorativa del perfil](https://media2.giphy.com/media/odegvNEsYf0Ig/giphy.gif?cid=ecf05e47vqwp5tbgsgvq7g4ggnrx1s456n87bb2orfrhmhyu&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+
 - Para subir los cambios los comandos son:
 
 * git status
@@ -19,6 +23,8 @@
 
 ## Para Usar las librerias o Pakages intalados
 
+![Imagen derorativa del perfil](https://media4.giphy.com/media/nGtOFccLzujug/giphy.gif?cid=ecf05e47enmwa472znv7eqxpdlf3q9paq1vnyr8giny41lbs&ep=v1_gifs_related&rid=giphy.gif&ct=g)
+
 - Importar archivos en el "cypress.config"
 
 * const { defineConfig } = require("cypress");
@@ -27,6 +33,8 @@
 * const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esbuild").createEsbuildPlugin;
 
 ## Crear archivos
+
+![Imagen derorativa del perfil](https://media3.giphy.com/media/BIA2rRLTq0ibe/giphy.gif?cid=ecf05e47hafzpdd3utmghp5kw5mbm7aes043k0llm3g6zaow&ep=v1_gifs_search&rid=giphy.gif&ct=g)
 
 - nombreTests.feature
 - nombreStep.js
@@ -57,17 +65,15 @@
   "cucumberautocomplete.smartSnippets": true,
   "cucumberautocomplete.stepsInvariants": true
 
-## Test realizados utilizando como ejemplo la pagina Yvytu
-
-**_ Test multiples _**
+## Test multiples
 
 - Ningun parametro (nada entre comillas)
 - Un parametro (una variable entre comillas)
 - Multiples parametros (cada uno entre comillas)
 
-**_ Test utilizando tablas _**
+## Test utilizando tablas
 
-- Tablas sencillas de una linea
-- Tablas con "cabecera" y una o multiples lineas
-- Tablas traspuestas (columnas a filas)
-- Tablas de Scenarios Outline
+- Tablas sencillas de una linea - (hashe)
+- Tablas con "cabecera" y una o multiples lineas - (rows)
+- Tablas traspuestas (columnas a filas) - (raw/rawTable)
+- Tablas de Scenarios Outline - (rowsHash)
