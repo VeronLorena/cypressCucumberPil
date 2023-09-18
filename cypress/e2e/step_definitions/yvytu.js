@@ -1,5 +1,13 @@
-import { Then } from "@badeball/cypress-cucumber-preprocessor";
+import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 const yvytuHome = require ("../../pages/yvytupage");
+
+When(`el usuario hace scroll hasta {string}`, (scrollToTxt) => {
+  cy.contains(scrollToTxt).scrollIntoView();
+});
+
+When(`el usuario presiona el botón {string}`, (btnName) => {
+  yvytuHome.getGenericBtn().contains(btnName).click();
+});
 
 Then(`visualiza en el header los botones {string}`, (list) => {
     list = list.split(",");
@@ -36,3 +44,14 @@ Then(`se visualizan las imágenes {string} en el banner`, (imgList) => {
         });
     });
 });
+
+Then(`el botón {string} no se visualiza`, (btnName) => {
+  yvytuHome.getGenericBtn().contains(btnName).should("not.be.visible");
+});
+Then(`el botón {string} se visualiza`, (btnName) => {
+  yvytuHome.getGenericBtn().contains(btnName).should("be.visible");
+});
+
+Then (`visualiza el link {string} redireciona a {string}`, (btnName, link) => {
+  yvytuHome.getGenericLink().contains(btnName).should("have.attr","href",link)
+})
