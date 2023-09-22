@@ -74,6 +74,10 @@
 ## Test utilizando tablas
 
 - Tablas sencillas de una linea - (hashe)
-- Tablas con "cabecera" y una o multiples lineas - (rows)
-- Tablas traspuestas (columnas a filas) - (raw/rawTable)
-- Tablas de Scenarios Outline - (rowsHash)
+- Tablas con "cabecera" y una o multiples lineas
+- Tablas traspuestas (columnas a filas)
+- Tablas de Scenarios Outline
+
+![Imagen derorativa del perfil](https://elmundodesandra.files.wordpress.com/2014/11/bob-leyendo.gif?w=337&h=246)
+
+## BRIF

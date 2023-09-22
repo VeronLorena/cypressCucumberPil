@@ -1,3 +1,4 @@
+@regrasion @yvytu
 Feature: Home Yvytu
 
     Scenario: Se visualiza Menú Superior

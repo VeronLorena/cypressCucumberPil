@@ -17,4 +17,10 @@ module.exports = defineConfig({
       return config;
     },
   },
+  viewportWidth: 1536,
+  viewportHeight: 960,
+  video: false,
+  retries: {
+    openMode: 0
+  }
 });
