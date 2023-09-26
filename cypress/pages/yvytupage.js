@@ -1,7 +1,7 @@
 class Yvytu {
     //Header
     getMenuAllButton(){
-        return cy.get("nav#menu-nav a");
+        return cy.get("#menu-nav > div:nth-child(1) > a");//nav#menu-nav a
     }
     //Banner de Images
     getCurrentImageBanner() {

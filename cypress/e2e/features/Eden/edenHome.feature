@@ -7,7 +7,7 @@ Feature: Tests de la página Eden
         Then se verifica que el titulo es "Cosquin Rock 2024 "
         And la fecha es "10" de "febrero" a las "14:00" Hs
 
-    @focus
+
     Scenario: Verificar funcionalidad del buscador
         Given que un usuario esta en la página "Eden"
         When escribe "rock" en el campo del buscador

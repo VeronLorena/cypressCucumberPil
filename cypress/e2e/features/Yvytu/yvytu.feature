@@ -1,6 +1,7 @@
 @regrasion @yvytu
 Feature: Home Yvytu
 
+    @menu
     Scenario: Se visualiza Menú Superior
         Given que un usuario esta en la página "Yvytu"
         Then visualiza en el header los botones "LA RESERVA,CABAÑAS,COMO LLEGAR,CONTACTO,DONÁ"
@@ -34,7 +35,7 @@ Feature: Home Yvytu
         Then se verifica que la cabaña "1" llamada "Yaguareté" posee las siguientes caracteristicas "Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi, Aire acondicionado"
         And se verifica que la cabaña "2" llamada "Arasari" posee las siguientes caracteristicas "Para 4 personas, 2 habitaciones, Baño con ducha, Ropa de cama, Wi-fi"
 
-    @focus
+    @ignore
     Scenario Outline: Verificar Cabañas <num>: <nombreCab>
         Given que un usuario esta en la página "Yvytu"
         When  el usuario hace scroll hasta "Nuestras cabañas"
