@@ -6,7 +6,12 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 
 
 module.exports = defineConfig({
-  e2e: {
+  env:{
+    TAGS:"not @ignore",
+    YVYTU_URL:"https://vientosdelaselva.com.ar/",
+    EDEN_URL: "https://www.edenentradas.com.ar/sitio/contenido/inicio",
+  },
+    e2e: {
     specPattern: "cypress/e2e/features/**/*.feature",
     async setupNodeEvents(on, config) {
       const bundler = createBundler ({

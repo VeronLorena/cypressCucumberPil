@@ -1,2 +1,4 @@
 node_modules
-cypress screenshot
+reports
+cypress/screenshots/
+cucumber-json-formatter.exe
