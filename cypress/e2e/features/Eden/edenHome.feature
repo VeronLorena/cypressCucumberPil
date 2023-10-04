@@ -1,5 +1,6 @@
 Feature: Tests de la página Eden
 
+
     Scenario: Verificar funcionalidad del buscador
         Given que un usuario esta en la página "Eden"
         When escribe "rock" en el campo del buscador
