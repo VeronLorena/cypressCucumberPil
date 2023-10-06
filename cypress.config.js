@@ -6,6 +6,7 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 
 
 module.exports = defineConfig({
+  "chromeWebSecurity": false,
   env:{
     TAGS:"not @ignore",
     YVYTU_URL:"https://vientosdelaselva.com.ar/",
@@ -30,5 +31,9 @@ module.exports = defineConfig({
   video: false,
   retries: {
     openMode: 0
-  }
+  },
+  
+    
+  
+  
 });
