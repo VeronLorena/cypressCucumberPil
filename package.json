@@ -48,5 +48,6 @@
       "enabled": true,
       "output": "reports/cucumber-report.html"
     }
+    
 }
 }

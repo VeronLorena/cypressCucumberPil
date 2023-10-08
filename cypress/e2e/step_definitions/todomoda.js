@@ -1,5 +1,5 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
-import TodoModaPage from "../../pages/TodoModaPage";
+import TodoModaPage, { getClose } from "../../pages/TodoModaPage";
 
     //Se reliza un screenshot de la pagina
 
@@ -33,7 +33,7 @@ Then(`el botón {string} es visible`, (btnName) => {
   TodoModaPage.getSusbtn().eq(0).contains(btnName).should("be.visible");
 });
 
-   //Hacer Click al boton suscrirce y rellenar formulario
+   // Rellenar el formulario e interactuar con el captcha
 When(`el usuario hace click en {string}`,(Susbtn) => {
  TodoModaPage.getSusbtn().contains(Susbtn).click();
 });
@@ -46,6 +46,7 @@ Then(`rellena el siguiente formulario con sus datos`,() => {
     const ciudad = Cypress.env()[0].ciudad;
 
     //ifreme codigo salvador
+
     const getIframeDocument = () => {
       return cy
       .get('iframe[title="reCAPTCHA"]')
@@ -81,3 +82,23 @@ Then(`rellena el siguiente formulario con sus datos`,() => {
    
     getIframeBody().find('#recaptcha-anchor').click();
 });
+
+//Test de compra de productos en la pagina de TodoModa
+
+When (`el usuario realiza un hover hasta seccion {string}`, (nuevo) => {
+ if ( TodoModaPage.getClose){
+  TodoModaPage.getClose().click()
+ };
+  TodoModaPage.getCategoria().contains(nuevo).trigger('mouseover')
+});
+Then (`visualiza un menu de sugerencia`,() => {
+  TodoModaPage.getSugerencia().should('be.visible')
+});
+When (`el usuario hace click en la categoria {string}`, (Halloween) =>{
+  TodoModaPage.getSeccion().contains(Halloween);
+});
+Then(`visualiza el especial de {string}`,(Halloween) => {
+  TodoModaPage.getSeccion().contains(Halloween).click();
+  cy.url().should('eq', 'https://ar.todomoda.com/halloween-tm.html')
+
+})

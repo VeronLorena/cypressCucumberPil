@@ -1,6 +1,6 @@
 Feature: Tests de la página TodoModa
 
-    Scenario: Visual testing  de TodoModa
+    Scenario: Visual testing de TodoModa
         Given que un usuario esta en la página "TodoModa"
         Then se compara "page-header" con la imagen base
 
@@ -12,17 +12,24 @@ Feature: Tests de la página TodoModa
             | color         | rgb(0, 0, 0) | letras de color negro |
 
 
-    Scenario: Test de ScrollToView  en la subcripcion de TodoModa
+    Scenario: Test de ScrollToView hasta subcripcion de TodoModa
         Given que un usuario esta en la página "TodoModa"
         When el usuario realiza scroll hasta "Suscribite al Newsletter"
         Then el botón "Suscribirse" es visible
 
-    @focus
 
-    Scenario: Test Click  en la subcripcion de TodoModa
+
+    Scenario: Test rellenar formulario y interactuar con el Captcha de TodoModa
         Given que un usuario esta en la página "TodoModa"
         When el usuario realiza scroll hasta "Suscribite al Newsletter"
         Then el botón "Suscribirse" es visible
         And el usuario hace click en "Suscribirse"
         Then rellena el siguiente formulario con sus datos
 
+    @focus
+    Scenario: Test de compra de productos en la pagina de TodoModa
+        Given que un usuario esta en la página "TodoModa"
+        When  el usuario realiza un hover hasta seccion "Nuevo!"
+        Then visualiza un menu de sugerencia
+        And el usuario hace click en la categoria "Halloween"
+        Then visualiza el especial de "Halloween"

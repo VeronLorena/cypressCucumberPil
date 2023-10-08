@@ -42,7 +42,17 @@ getCheckboxInfo2(){
 getRobot(){
     return cy.get("#recaptcha-anchor");
 }
-
-
+getClose(){
+    return cy.get("#wps-overlay-close-button");
+}
+getCategoria(){
+    return cy.get("span.category-name");
+}
+getSugerencia(){
+    return cy.get("div.pagebuilder-column-line.slick-initialized.slick-slider")
+}
+getSeccion(){
+    return cy.get("a.pagebuilder-button-link");
+}
 }
 module.exports = new TodoModaPage();
