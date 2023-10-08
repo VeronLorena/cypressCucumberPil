@@ -83,7 +83,7 @@ Then(`rellena el siguiente formulario con sus datos`,() => {
     getIframeBody().find('#recaptcha-anchor').click();
 });
 
-//Test de compra de productos en la pagina de TodoModa
+//Test de menu de sugerencia en la pagina de TodoModa
 
 When (`el usuario realiza un hover hasta seccion {string}`, (nuevo) => {
  if ( TodoModaPage.getClose){

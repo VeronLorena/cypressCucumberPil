@@ -27,7 +27,7 @@ Feature: Tests de la página TodoModa
         Then rellena el siguiente formulario con sus datos
 
     @focus
-    Scenario: Test de compra de productos en la pagina de TodoModa
+    Scenario: Test de menu de sugerencia en la pagina de TodoModa
         Given que un usuario esta en la página "TodoModa"
         When  el usuario realiza un hover hasta seccion "Nuevo!"
         Then visualiza un menu de sugerencia
