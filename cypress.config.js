@@ -6,12 +6,15 @@ const createEsbuildPlugin = require("@badeball/cypress-cucumber-preprocessor/esb
 
 
 module.exports = defineConfig({
+  "chromeWebSecurity": false,
   env:{
     TAGS:"not @ignore",
     YVYTU_URL:"https://vientosdelaselva.com.ar/",
-    EDEN_URL: "https://www.edenentradas.com.ar/sitio/contenido/inicio",
+    EDEN_URL:"https://www.edenentradas.com.ar/sitio/contenido/inicio",
+    TODOMODA_URL:"https://ar.todomoda.com/",
   },
     e2e: {
+   
     specPattern: "cypress/e2e/features/**/*.feature",
     async setupNodeEvents(on, config) {
       const bundler = createBundler ({
@@ -19,6 +22,7 @@ module.exports = defineConfig({
       });
       on("file:preprocessor",bundler);
       await addCucumberPreprocesorPlugin(on, config);
+      require("cypress-image-diff-js/dist/plugin")(on, config);
       return config;
     },
   },
@@ -27,5 +31,9 @@ module.exports = defineConfig({
   video: false,
   retries: {
     openMode: 0
-  }
+  },
+  
+    
+  
+  
 });
