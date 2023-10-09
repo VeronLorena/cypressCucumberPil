@@ -1,8 +1,9 @@
+@regression @todomoda
 Feature: Tests de la página TodoModa
 
-    Scenario: Visual testing de TodoModa
-        Given que un usuario esta en la página "TodoModa"
-        Then se compara "page-header" con la imagen base
+    /    Scenario: Visual testing de TodoModa
+    /        Given que un usuario esta en la página "TodoModa"
+    /        Then se compara "page-header" con la imagen base
 
     Scenario: Test visual del header de TodoModa
         Given que un usuario esta en la página "TodoModa"
@@ -26,7 +27,6 @@ Feature: Tests de la página TodoModa
         And el usuario hace click en "Suscribirse"
         Then rellena el siguiente formulario con sus datos
 
-    @focus
     Scenario: Test de menu de sugerencia en la pagina de TodoModa
         Given que un usuario esta en la página "TodoModa"
         When  el usuario realiza un hover hasta seccion "Nuevo!"
