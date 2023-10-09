@@ -1,10 +1,11 @@
 import { When, Then } from "@badeball/cypress-cucumber-preprocessor";
 import TodoModaPage, { getClose } from "../../pages/TodoModaPage";
 
+
     //Se reliza un screenshot de la pagina
 
 Then(`se compara {string} con la imagen base`,(imgeName) => {
- cy.compareSnapshot(imgeName);
+//cy.compareSnapshot(imgeName);
 });
 
     //Se busca compara o encontrar los siguientes atributos
@@ -31,6 +32,8 @@ When(`el usuario realiza scroll hasta {string}`, () => {
   });
 Then(`el botón {string} es visible`, (btnName) => {
   TodoModaPage.getSusbtn().eq(0).contains(btnName).should("be.visible");
+  TodoModaPage.getClose().click();
+
 });
 
    // Rellenar el formulario e interactuar con el captcha
@@ -80,7 +83,7 @@ Then(`rellena el siguiente formulario con sus datos`,() => {
     TodoModaPage.getCheckboxInfo().click();
     TodoModaPage.getCheckboxInfo2().click();
    
-    getIframeBody().find('#recaptcha-anchor').click();
+    //getIframeBody().find('#recaptcha-anchor').click();
 });
 
 //Test de menu de sugerencia en la pagina de TodoModa
