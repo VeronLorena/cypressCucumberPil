@@ -6,9 +6,9 @@
 
 - 1 comando : npm init
 - 2 comando: npm install cypress
-- 3 comando: npm install @badeball/cypress-cucumber-preprocessor
-- 4 comando: npm install @badeball/cypress-esbuild-preprocessor
-- 5 comando: npx cypress open
+- 3 comando: npx cypress open
+- 4 comando: npm install @badeball/cypress-cucumber-preprocessor
+- 5 comando: npm i -D cypress @bahmutov/cypress-esbuild-preprocessor esbuild
 
 ## IMPORTANTE:
 
@@ -20,6 +20,13 @@
 * git add . (para agregar todo el cambio) - git add " y nombre del archivo" (para agregar un archivo el especifico)
 * git commit -m "cambio que se realizo" (para dar nombre al cambio)
 * git push (para subir el cambio)
+* git switch -c (Cambiar de rama)
+* git commit -m "feat(PCW-9478| PCW-6898):problems when processing your chip" (Subir un cambio)
+* git commit -m "fix: add validation identity and CI changes " (Subir una modificacion del mismo pcw)
+* git commit --amend -m "Mensaje" (Modificar ultimo commit)
+* git reset --hard HEAD~1 (Deshacer un git stage)
+* npx cypress run TAGS="@smoke" | @smoke  (Correr una Regre )
+
 
 ## Para Usar las librerias o Pakages intalados
 
@@ -80,4 +87,4 @@
 
 ![Imagen derorativa del perfil](https://elmundodesandra.files.wordpress.com/2014/11/bob-leyendo.gif?w=337&h=246)
 
-## BRIF
+
